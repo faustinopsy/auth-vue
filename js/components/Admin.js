@@ -53,9 +53,11 @@ export default {
             this.produtos = data;
           } else {
             alert(data.error || 'Erro ao listar produtos');
+            this.$router.push('/login');
           }
         } catch (error) {
           alert('Erro na conexão com o servidor');
+          this.$router.push('/login');
         }
       },
       async atualizarProduto(produto) {

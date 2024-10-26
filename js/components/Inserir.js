@@ -50,9 +50,11 @@ export default {
             this.preco = '';
           } else {
             alert(data.error || 'Erro ao inserir produto');
+            this.$router.push('/login');
           }
         } catch (error) {
           alert('Erro na conexão com o servidor');
+          this.$router.push('/login');
         }
       },
     },
